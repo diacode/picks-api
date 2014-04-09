@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %title Diacode Picks
+    = stylesheet_link_tag    'auth/base', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'auth/base', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    = yield
