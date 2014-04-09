@@ -40,7 +40,7 @@ gem 'jazz_hands', group: :development
 gem 'byebug', group: :development
 
 # Testing purposes
-gem 'rspec-rails'
+gem 'rspec-rails', group: [:development, :test]
 gem 'capybara'
 gem 'factory_girl'
 
