@@ -1,13 +1,13 @@
 %header
   %nav.navbar.navbar-default.navbar-inverse{role: 'navigation'}
-    = link_to "Picks", "/", class: 'navbar-brand'
-    
-    %ul.nav.navbar-nav.navbar-right
+    = link_to "/", class: 'navbar-brand' do
+      = image_tag "picks-logo-left-white.png", width: 24
+      PICKS
+
+    %ul.nav.navbar-nav.navbar-right.header-actions
       %li.dropdown
         = link_to "#", class: 'dropdown-toggle', data: {toggle: 'dropdown'} do 
           %span.glyphicon.glyphicon-user
           JOHN DOE
-          %b.caret
-
-          %ul.dropdown-menu
-            %li= link_to "Logout", "#"
+        %ul.dropdown-menu
+          %li= link_to "Logout", "#"

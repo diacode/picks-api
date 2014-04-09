@@ -13,6 +13,18 @@ a, a:link, a:hover, a:visited, a:active{
   }
 }
 
+header{
+  .header-actions{
+    > li {
+      > a {
+        .glyphicon{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
 .box-wrapper{
   position: absolute;
   top: 58px;

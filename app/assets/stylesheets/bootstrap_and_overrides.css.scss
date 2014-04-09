@@ -2,15 +2,28 @@
 
 .navbar{
   border-radius: 0px;
-  padding: 0.3em 1.5em;
   border: 0px;
 
   &.navbar-inverse{
     color: #242424;
 
-    .navbar-nav > li > a {
-      color: $default-link-color;
-    } 
+    .navbar-nav > li {
+      > a {
+        padding: 20px;
+        display: inline-block;
+        color: $default-link-color;
+      } 
+    }
+
+    .navbar-brand{
+      img{ margin-right: 5px; }
+      font-size: 20px;
+      letter-spacing: 3px;
+      padding: 20px;
+      height: auto;
+    }
   }
+
+  .navbar-nav.navbar-right:last-child{ margin-right: 0px; }
 }
 
