@@ -1,11 +1,12 @@
 %header
-  %nav.navbar.navbar-default{role: 'navigation'}
+  %nav.navbar.navbar-default.navbar-inverse{role: 'navigation'}
     = link_to "Picks", "/", class: 'navbar-brand'
     
     %ul.nav.navbar-nav.navbar-right
       %li.dropdown
         = link_to "#", class: 'dropdown-toggle', data: {toggle: 'dropdown'} do 
-          Logged user
+          %span.glyphicon.glyphicon-user
+          JOHN DOE
           %b.caret
 
           %ul.dropdown-menu
