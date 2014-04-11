@@ -1,0 +1,25 @@
+header
+  nav.navbar.navbar-default.navbar-inverse role="navigation"
+    a href="/" class="navbar-brand"
+      img src="assets/picks-logo-left-white.png" width="24"
+      | PICKS
+
+    ul.nav.navbar-nav.navbar-right.header-actions
+      li.dropdown
+        a href="#" class="dropdown-toggle" 
+          span.glyphicon.glyphicon-user
+          | JOHN DOE
+
+.box-wrapper
+  aside#sidebar
+    ul
+      li
+        a href="#"
+          span.glyphicon.glyphicon-link
+          | Links
+      li
+        a href="#"
+          span.glyphicon.glyphicon-list-alt
+          | Compilations
+
+  #main= outlet

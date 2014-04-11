@@ -19,9 +19,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
@@ -46,6 +43,12 @@ gem 'factory_girl'
 
 # Link inspection
 gem 'metainspector'
+
+# Ember dependencies
+gem 'ember-rails'
+gem 'ember-source', '1.5.0'
+gem 'ember_script-rails', :github => 'ghempton/ember-script-rails'
+gem 'emblem-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
