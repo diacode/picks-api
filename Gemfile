@@ -44,6 +44,11 @@ gem 'rspec-rails', group: [:development, :test]
 gem 'capybara'
 gem 'factory_girl'
 
+# Ember dependencies
+gem 'ember-rails'
+gem 'ember-source', '1.5.0'
+gem 'ember_script-rails', :github => 'ghempton/ember-script-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
