@@ -43,6 +43,9 @@ GEM
       ember-source
       execjs
       handlebars-source
+    barber-emblem (0.1.1)
+      barber (>= 0.4.1)
+      emblem-source
     bcrypt (3.1.7)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -101,6 +104,10 @@ GEM
       execjs
       tilt
     ember_script-source (0.0.14)
+    emblem-rails (0.2.1)
+      barber-emblem (~> 0.1.1)
+      ember-rails (>= 0.14.0)
+    emblem-source (0.3.13)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.4.0)
@@ -259,6 +266,7 @@ DEPENDENCIES
   ember-rails
   ember-source (= 1.5.0)
   ember_script-rails!
+  emblem-rails
   factory_girl
   haml-rails
   jazz_hands
