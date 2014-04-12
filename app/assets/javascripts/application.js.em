@@ -3,6 +3,7 @@
 #= require handlebars
 #= require ember
 #= require ember-data
+#= require jquery.icheck
 #= require_self
 #= require diacode_picks
 

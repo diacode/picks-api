@@ -50,6 +50,9 @@ gem 'ember-source', '1.5.0'
 gem 'ember_script-rails', :github => 'ghempton/ember-script-rails'
 gem 'emblem-rails'
 
+# jquery plugins
+gem 'icheck-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
