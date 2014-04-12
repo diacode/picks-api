@@ -7,4 +7,7 @@
 #= require diacode_picks
 
 # for more details see: http://emberjs.com/guides/application/
-window.DiacodePicks = Ember.Application.create()
+window.DiacodePicks = Ember.Application.create
+  LOG_TRANSITIONS: true
+  LOG_VIEW_LOOKUPS: true
+  LOG_ACTIVE_GENERATION: true
