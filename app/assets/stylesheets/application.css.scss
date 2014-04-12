@@ -5,6 +5,8 @@
 
 body{
   font-family: Lato;
+  font-weight: 300;
+  font-size: 1.6em;
 }
 
 a, a:link, a:hover, a:visited, a:active{
@@ -35,7 +37,7 @@ header{
   display: flex;
 
   aside#sidebar{
-    width: 140px;
+    width: 155px;
     background: $sidebar-background-color;
 
     ul{
