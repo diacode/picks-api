@@ -1,4 +1,1 @@
-each model
-  .model= url
-else
-  p No links found
+= collection DiacodePicks.LinksListView contentBinding="this"

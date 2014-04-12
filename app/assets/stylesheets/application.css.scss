@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 @import "_variables";
 @import "bootstrap_and_overrides";
+@import "links";
 
 body{
   font-family: Lato;
@@ -88,6 +89,6 @@ header{
     display: flex;
     flex-direction: column;
     background-color: #EBEBEB;
-    padding: 2em;
+    padding: 0;
   }
 }
