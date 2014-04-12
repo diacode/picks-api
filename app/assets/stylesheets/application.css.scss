@@ -70,12 +70,10 @@ header{
           &:hover{
             background-color: darken($sidebar-background-color, 10%);
           }
-        }
 
-        &.active{
-          background-color: $default-link-color;
+          &.active{
+            background-color: $default-link-color;
 
-          a{
             .glyphicon{
               color: #fff;
             }
