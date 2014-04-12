@@ -20,6 +20,10 @@ form.add-link{
     color: #888;
 
     .title{
+      .fancy-checkbox{
+        display: inline-block;
+        margin-right: 10px;
+      }
       font-size: 2em;
       margin-top: 0px;
       color: #333;
