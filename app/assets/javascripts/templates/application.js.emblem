@@ -13,10 +13,10 @@ header
 .box-wrapper
   aside#sidebar
     ul
-      li
-        a href="#"
-          span.glyphicon.glyphicon-link
-          | Links
+      li= link-to 'links'
+        span.glyphicon.glyphicon-link
+        | Links
+
       li
         a href="#"
           span.glyphicon.glyphicon-list-alt
