@@ -7,4 +7,8 @@ class Api::LinksController < Api::BaseController
     link_data = Link.discover(url)
     respond_with Link.create(link_data), location: nil
   end
+
+  def index
+    respond_with Link.all
+  end
 end
