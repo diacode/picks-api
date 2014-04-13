@@ -40,6 +40,7 @@ header{
   aside#sidebar{
     width: 175px;
     background: $sidebar-background-color;
+    flex: 0 1 auto;
 
     ul{
       display:block;
@@ -88,9 +89,8 @@ header{
   }
 
   #main{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    flex: 1 1 auto;
+    overflow: scroll;
     background-color: #EBEBEB;
     padding: 0;
   }
