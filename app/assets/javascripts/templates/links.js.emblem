@@ -3,4 +3,6 @@ form.add-link.form-inline
     Ember.TextField placeholder="Insert URL here to add new link" class="input-lg form-control"
   button.btn.btn-lg.btn-primary ADD 
 
+DiacodePicks.LinksSelectionPanelView
+
 = collection DiacodePicks.LinksListView contentBinding="this"

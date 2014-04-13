@@ -13,20 +13,51 @@ form.add-link{
 
 .link-list{
   max-width: 900px;
+  background-color: #fff;
+  margin: 2em;
 
   .link-item{
-    border-bottom: 2px solid #fff;
-    padding: 2em;
+    border-bottom: 2px solid #EBEBEB;
+    padding: 1.5em;
     color: #888;
+    display: flex;
 
-    .title{
-      .fancy-checkbox{
-        display: inline-block;
-        margin-right: 10px;
-      }
-      font-size: 2em;
-      margin-top: 0px;
-      color: #333;
+    .checkbox-wrapper{
+      flex: 0 1 auto;
+      width: 40px;
+      max-width: 40px;
+      margin-top: 3px;
     }
+
+    .details{
+      flex: 1 2 auto;
+      margin-top: -5px;
+
+      .title{
+        font-size: 2em;
+        margin-top: 0px;
+        color: #333;
+      }
+    }
+
+    &:hover{
+      background: #efefef;
+      transition: background-color 250ms ease-out;
+    }
+  }
+}
+
+.link-selection-panel{
+  background-color: #50BA7F;
+  padding: 1em;
+  color: #fff;
+
+  .selection-count{
+    margin-top: 5px;
+    font-size: 1.5em;
+  }
+
+  .selection-actions{
+
   }
 }

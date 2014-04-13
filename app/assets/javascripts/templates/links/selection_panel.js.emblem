@@ -1,0 +1,9 @@
+.selection-count.pull-left
+  | You have 
+  strong 3 
+  | links selected
+
+.selection-actions.pull-right
+  a.btn.btn-lg.btn-primary Actions
+
+.clearfix
