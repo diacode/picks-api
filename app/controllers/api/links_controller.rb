@@ -11,4 +11,20 @@ class Api::LinksController < Api::BaseController
   def index
     respond_with Link.all
   end
+
+  def update
+    @link = Link.find(params[:id])
+    @link.update_attributes(link_params)
+    respond_with @link
+  end
+
+  private
+
+  def link_params
+    params.require(:link).permit(
+      :title,
+      :description,
+      :category
+    )
+  end
 end
