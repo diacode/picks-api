@@ -1,7 +1,7 @@
 .selection-count.pull-left
   | You have 
-  strong 3 
-  | links selected
+  strong= view.selectedItemsCount 
+  |  links selected
 
 .selection-actions.pull-right
   a.btn.btn-lg.btn-primary Actions

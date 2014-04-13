@@ -1,5 +1,5 @@
 .checkbox-wrapper
-  DiacodePicks.FancyCheckbox 
+  DiacodePicks.FancyCheckbox checked=isChecked
 .details
   h2.title
     = title
