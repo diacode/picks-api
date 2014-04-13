@@ -4,9 +4,9 @@
 .details
   if isEditing
     .form-group
-      Ember.TextField value=model.title class="form-control"
+      Ember.TextField value=model.title class="form-control" placeholder="Add some title here"
     .form-group
-      Ember.TextArea value=model.description class="form-control"
+      Ember.TextArea value=model.description class="form-control" placeholder="Add some description here"
     .form-group.edit-actions
       button.btn.btn-primary{action "saveChanges"} type="button" 
         span.glyphicon.glyphicon-ok 
