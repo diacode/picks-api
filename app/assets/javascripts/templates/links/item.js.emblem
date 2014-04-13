@@ -1,9 +1,21 @@
 .checkbox-wrapper
-  DiacodePicks.FancyCheckbox checked=isChecked
+  unless isEditing
+    DiacodePicks.FancyCheckbox checked=isChecked
 .details
-  h2.title
-    = title
-  p.description= description
+  if isEditing
+    .form-group
+      Ember.TextField value=model.title class="form-control"
+    .form-group
+      Ember.TextArea value=model.description class="form-control"
+    .form-group.edit-actions
+      button.btn.btn-primary{action "saveChanges"} type="button" 
+        span.glyphicon.glyphicon-ok 
+        |  Save
+      button.btn.btn-default{action "cancelEditing"} type="button" Cancel
+  else
+    h2.title{action "editLink" on="doubleClick"}= title
+    p.description= description
+
   a href=url target="_blank" class="url"
     span.link=url
     

@@ -27,10 +27,6 @@ form.add-link{
       width: 45px;
       max-width: 40px;
       margin-top: 3px;
-
-
-
-      
     }
 
     .details{
@@ -41,6 +37,12 @@ form.add-link{
         font-size: 2em;
         margin-top: 0px;
         color: #333;
+      }
+
+      .edit-actions{
+        button{
+          margin-right: 5px;
+        }
       }
     }
 
