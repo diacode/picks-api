@@ -4,6 +4,16 @@
   |  links selected
 
 .selection-actions.pull-right
-  a.btn.btn-lg.btn-primary Actions
+  .btn-group
+    button.btn.btn-lg.btn-primary type="button" Add to new list
+    button.btn.btn-lg.btn-primary.dropdown-toggle data-toggle="dropdown"
+      span.caret
+      span.sr-only Toggle more actions
+    ul.dropdown-menu.pull-right
+      li
+        a href="#" Add to existing list
+      li
+        a href="#" Delete
+
 
 .clearfix

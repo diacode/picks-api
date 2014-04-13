@@ -8,3 +8,5 @@ DiacodePicks.LinksSelectionPanelView = Ember.View.extend
     selectedItemsCount = @get('selectedItemsCount')
     @set('isVisible', selectedItemsCount > 0)
   ).observes('selectedItemsCount')
+  didInsertElement: ->
+    @$('.dropdown-toggle').dropdown()
