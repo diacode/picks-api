@@ -14,6 +14,7 @@ DiacodePicks.LinksController = Ember.ArrayController.extend
         newLink.rollback()
         alert('Error!')
     deleteSelection: ->
+      # TODO: Figure out some way to delete the selection using only one AJAX call
       selectedItems = @get('selected')
       selectedItems.forEach (item) ->
         linkObject = item.get('content')
