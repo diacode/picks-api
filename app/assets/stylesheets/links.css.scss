@@ -12,15 +12,15 @@ form.add-link{
 }
 
 .link-list{
-  max-width: 900px;
-  background-color: #fff;
   margin: 2em;
 
   .link-item{
     border-bottom: 2px solid #EBEBEB;
     padding: 1.5em;
     color: #888;
+    background-color: #fff;
     display: flex;
+    max-width: 900px;
 
     .checkbox-wrapper{
       flex: 0 1 auto;
@@ -30,7 +30,7 @@ form.add-link{
     }
 
     .details{
-      flex: 1 2 auto;
+      flex: 1 10 auto;
       margin-top: -5px;
 
       .title{
@@ -50,6 +50,14 @@ form.add-link{
       background: #efefef;
       transition: background-color 250ms ease-out;
     }
+  }
+
+  p.empty{
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+    color: #ababab;
+    margin: 2em 0em;
   }
 }
 

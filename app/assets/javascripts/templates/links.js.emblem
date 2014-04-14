@@ -6,5 +6,13 @@ form submit="addLink" class="add-link form-inline"
 DiacodePicks.LinksSelectionPanelView selectedItemsCount=selected.length
 
 .link-list
-  = each controller
+  each controller
     DiacodePicks.LinksItemView content=this
+  else
+    p.empty
+      span.glyphicon.glyphicon.glyphicon-tree-deciduous
+      span.glyphicon.glyphicon.glyphicon-tree-conifer
+      span.glyphicon.glyphicon.glyphicon-tree-deciduous
+      span.glyphicon.glyphicon.glyphicon-tree-conifer
+      br
+      | Antes todo esto era campo
