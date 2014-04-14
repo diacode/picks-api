@@ -13,7 +13,7 @@
       li
         a href="#" Add to existing list
       li
-        a href="#" Delete
+        a{action 'deleteSelection'} href="#" Delete
 
 
 .clearfix

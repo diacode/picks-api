@@ -13,3 +13,8 @@ DiacodePicks.LinksController = Ember.ArrayController.extend
       ), -> 
         newLink.rollback()
         alert('Error!')
+    deleteSelection: ->
+      selectedItems = @get('selected')
+      selectedItems.forEach (item) ->
+        linkObject = item.get('content')
+        linkObject.destroyRecord()
