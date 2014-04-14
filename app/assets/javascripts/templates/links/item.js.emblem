@@ -2,6 +2,9 @@
   unless isEditing
     DiacodePicks.FancyCheckbox checked=isChecked
 .details
+  if isSaving
+    p Loading details ...
+
   if isEditing
     .form-group
       Ember.TextField value=model.title class="form-control" placeholder="Add some title here"
