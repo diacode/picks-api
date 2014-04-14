@@ -25,6 +25,12 @@ class Api::LinksController < Api::BaseController
     respond_with @link
   end
 
+  def destroy
+    link = Link.find(params[:id])
+    link.destroy
+    render json: nil, status: :ok
+  end
+
   private
 
   def link_params
