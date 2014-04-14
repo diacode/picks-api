@@ -1,4 +1,8 @@
 DiacodePicks.LinksController = Ember.ArrayController.extend
+  # Sorting settings
+  sortProperties: ['createdAt']
+  sortAscending: false
+  # End of sorting settings
   itemController: 'linksItem'
   selected: Ember.computed.filterBy('[]', 'isChecked', true)
   newLinkUrl: ''
@@ -6,6 +10,7 @@ DiacodePicks.LinksController = Ember.ArrayController.extend
     addLink: ->
       newLink = @store.createRecord('link', {
         url: @get('newLinkUrl')
+        createdAt: new Date()
       })
 
       newLink.save().then (=>
