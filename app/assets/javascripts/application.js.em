@@ -4,6 +4,7 @@
 #= require ember
 #= require ember-data
 #= require bootstrap/dropdown
+#= require moment
 #= require jquery.icheck
 #= require_self
 #= require diacode_picks
