@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   root to: "application#index"
   
   namespace :api do
-    resources :links do
-      post 'discover', on: :collection
-    end
+    resources :links
   end
 end
