@@ -3,6 +3,8 @@
 #= require handlebars
 #= require ember
 #= require ember-data
+#= require ember-simple-auth
+#= require ember-simple-auth-devise
 #= require bootstrap/dropdown
 #= require moment
 #= require jquery.icheck
