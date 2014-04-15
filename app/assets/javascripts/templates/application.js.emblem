@@ -5,21 +5,29 @@ header
       | PICKS
 
     ul.nav.navbar-nav.navbar-right.header-actions
-      li.dropdown
-        a href="#" class="dropdown-toggle" 
-          span.glyphicon.glyphicon-user
-          | JOHN DOE
+      if session.isAuthenticated
+        li.dropdown
+          a href="#" class="dropdown-toggle" 
+            span.glyphicon.glyphicon-user
+            | #{session.auth_email}
+          ul.dropdown-menu
+            li
+              a{action 'invalidateSession'} href="#" Logout
+      else      
+        li
+          = link-to "login" | Login
 
 .box-wrapper
-  aside#sidebar
-    ul
-      li= link-to 'links'
-        span.glyphicon.glyphicon-link
-        | Links
+  if session.isAuthenticated
+    aside#sidebar
+      ul
+        li= link-to 'links'
+          span.glyphicon.glyphicon-link
+          | Links
 
-      li
-        a href="#"
-          span.glyphicon.glyphicon-list-alt
-          | Compilations
+        li
+          a href="#"
+            span.glyphicon.glyphicon-list-alt
+            | Compilations
 
   #main= outlet

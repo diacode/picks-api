@@ -8,16 +8,16 @@ class Api::BaseController < ApplicationController
   before_filter :authenticate_user!
 
   private
-    # Token authentication based on this Jose Valim gist.
-    # https://gist.github.com/josevalim/fb706b1e933ef01e4fb6
+    # Token authentication based on:
+    # https://github.com/simplabs/ember-simple-auth/tree/master/packages/ember-simple-auth-devise#the-authorizer
     def authenticate_user_from_token!
-      user_email = params[:api_email].presence
-      user       = user_email && User.find_by_email(user_email)
-   
-      # Notice how we use Devise.secure_compare to compare the token
-      # in the database with the token given in the params, mitigating
-      # timing attacks.
-      if user && Devise.secure_compare(user.api_token, params[:api_token])
+      token = request.headers['auth-token'].to_s
+      email = request.headers['auth-email'].to_s
+      return unless token && email
+
+      user = User.find_by_email(email)
+
+      if user && Devise.secure_compare(user.api_token, token)
         sign_in user, store: false
       end
     end
