@@ -1,4 +1,4 @@
-DiacodePicks.Link = DS.Model.extend
+class DiacodePicks.Link extends DS.Model
   url: DS.attr('string')
   title: DS.attr('string')
   description: DS.attr('string')
