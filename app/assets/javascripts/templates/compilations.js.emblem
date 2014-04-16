@@ -2,7 +2,7 @@
   ul.compilations-list
     each controller
       li
-        a href="#"
+        = link-to 'compilation' this
           .installment.pull-left= installment
           .details.pull-left
             .link-count 123 links

@@ -3,4 +3,5 @@
 DiacodePicks.Router.map ->
   @route('login')
   @resource('links')
-  @resource('compilations')
+  @resource 'compilations', ->
+    @resource 'compilation', path: ':compilation_id'
