@@ -12,8 +12,10 @@ describe Compilation do
     end
 
     context 'There is a previous compilation registered' do
-      let(:previous_compilation){ FactoryGirl.create(:compilation) }
-
+      before do
+        FactoryGirl.create(:compilation)
+      end
+      
       it 'should be the second installment' do
         compilation = Compilation.new
         compilation.generate_installment 
