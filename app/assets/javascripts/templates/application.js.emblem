@@ -25,9 +25,8 @@ header
           span.glyphicon.glyphicon-link
           | Links
 
-        li
-          a href="#"
-            span.glyphicon.glyphicon-list-alt
-            | Compilations
+        li= link-to 'compilations'
+          span.glyphicon.glyphicon-list-alt
+          | Compilations
 
   #main= outlet

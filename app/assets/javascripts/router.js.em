@@ -3,4 +3,4 @@
 DiacodePicks.Router.map ->
   @route('login')
   @resource('links')
-
+  @resource('compilations')
