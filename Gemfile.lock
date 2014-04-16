@@ -113,6 +113,9 @@ GEM
     execjs (2.0.2)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
+    factory_girl_rails (4.4.1)
+      factory_girl (~> 4.4.0)
+      railties (>= 3.0.0)
     grit (2.5.0)
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
@@ -274,7 +277,7 @@ DEPENDENCIES
   ember-source (= 1.5.0)
   ember_script-rails!
   emblem-rails
-  factory_girl
+  factory_girl_rails
   haml-rails
   icheck-rails
   jazz_hands

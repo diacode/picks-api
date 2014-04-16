@@ -39,7 +39,7 @@ gem 'byebug', group: :development
 # Testing purposes
 gem 'rspec-rails', group: [:development, :test]
 gem 'capybara'
-gem 'factory_girl'
+gem 'factory_girl_rails'
 
 # Link inspection
 gem 'metainspector'
