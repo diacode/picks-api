@@ -1,2 +1,17 @@
-each controller
-  = installment
+#compilations_wrapper
+  ul.compilations-list
+    each controller
+      li
+        a href="#"
+          .installment.pull-left= installment
+          .details.pull-left
+            .link-count 123 links
+            .status Published 20 days ago
+          .clearfix
+
+    else
+      li.empty
+        p No compilations created
+
+  .compilation-detail
+    = outlet
