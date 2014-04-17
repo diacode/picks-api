@@ -26,3 +26,16 @@ DiacodePicks.LinksController = Ember.ArrayController.extend
         
     deleteSelection: ->
       @get('selectedLinks').invoke('destroyRecord')
+
+    createCompilationWithSelection: ->
+      link_ids = @get('selectedLinks').map (item) -> item.id
+      newCompilation = @store.createRecord('compilation')
+
+      # Adding links to compilation
+      @get('selectedLinks').forEach (link) ->
+        newCompilation.get('links').addObject(link)
+
+      newCompilation.save().then (=>
+        alert "SAVED!"
+      ), ->
+        alert "SA MATAO PACO"
