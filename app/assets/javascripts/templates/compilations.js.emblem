@@ -6,7 +6,14 @@
           .installment.pull-left= installment
           .details.pull-left
             .link-count 123 links
-            .status Published 20 days ago
+            .status 
+              if isPublished
+                .published
+                  span.glyphicon.glyphicon-ok 
+                  |  Published  
+                  = time-since publishedAt
+              else 
+                | Not published yet
           .clearfix
 
     else

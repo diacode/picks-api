@@ -41,7 +41,7 @@
         }
 
         .details{
-          padding: 15px;
+          padding: 18px;
 
           .link-count{
             font-size: 1.2em;
@@ -49,6 +49,9 @@
 
           .status{
             font-size: 0.8em;
+            .published{
+              color: #50ba7f;
+            }
           }
         }
       }

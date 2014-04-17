@@ -3,3 +3,5 @@ class DiacodePicks.Compilation extends DS.Model
   publishedAt: DS.attr 'date'
   createdAt: DS.attr 'date'
   updatedAt: DS.attr 'date'
+  +computed publishedAt
+  isPublished: -> @publishedAt isnt null
