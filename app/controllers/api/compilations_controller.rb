@@ -9,7 +9,11 @@ class Api::CompilationsController < Api::BaseController
     respond_with Compilation.all
   end
 
+  def show
+    respond_with Compilation.find params[:id]
+  end
+
   def compilation_params
-    params.require(:compilation).permit(:link_ids)
+    params.require(:compilation).permit(link_ids: [])
   end
 end
