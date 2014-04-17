@@ -6,4 +6,5 @@ class DiacodePicks.Link extends DS.Model
   status: DS.attr('string')
   createdAt: DS.attr('date')
   updatedAt: DS.attr('date')
+  # Relationships
   compilation: DS.belongsTo('compilation')
