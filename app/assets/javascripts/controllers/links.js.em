@@ -11,16 +11,18 @@ DiacodePicks.LinksController = Ember.ArrayController.extend
   newLinkUrl: ''
   actions:
     addLink: ->
-      newLink = @store.createRecord('link', {
-        url: @get('newLinkUrl')
-        createdAt: new Date()
-      })
+      # TODO: Use regex to check if the link is a valid url
+      unless Ember.isBlank(@get('newLinkUrl'))
+        newLink = @store.createRecord('link', {
+          url: @get('newLinkUrl')
+          createdAt: new Date()
+        })
 
-      newLink.save().then (=>
-        @set('newLinkUrl', "")
-      ), -> 
-        newLink.rollback()
-        alert('Error!')
+        newLink.save().then (=>
+          @set('newLinkUrl', "")
+        ), -> 
+          newLink.rollback()
+          alert('Error!')
         
     deleteSelection: ->
       @get('selectedLinks').invoke('destroyRecord')
