@@ -1,6 +1,9 @@
 class Link < ActiveRecord::Base
   STATUSES = %w(new used discarded)
 
+  # Relations
+  belongs_to :compilation
+
   # Validations
   validates :url, presence: true
   validates :status, inclusion: {in: STATUSES}

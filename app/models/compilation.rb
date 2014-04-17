@@ -1,4 +1,8 @@
 class Compilation < ActiveRecord::Base
+  # Relations
+  has_many :links
+
+  # Callbacks
   before_create :generate_installment
 
   def generate_installment

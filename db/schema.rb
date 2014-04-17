@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140416101451) do
+ActiveRecord::Schema.define(version: 20140417002951) do
 
   create_table "compilations", force: true do |t|
     t.integer  "installment"
@@ -28,7 +28,10 @@ ActiveRecord::Schema.define(version: 20140416101451) do
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "compilation_id"
   end
+
+  add_index "links", ["compilation_id"], name: "index_links_on_compilation_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
