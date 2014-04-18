@@ -6,7 +6,7 @@ form submit="addLink" class="add-link form-inline"
 DiacodePicks.LinksSelectionPanelView selectedItemsCount=selected.length
 
 .link-list
-  each controller
+  each sortedLinks
     DiacodePicks.LinksItemView content=this
   else
     p.empty

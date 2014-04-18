@@ -1,13 +1,10 @@
 DiacodePicks.LinksController = Ember.ArrayController.extend
-  # Sorting settings
-  sortProperties: ['createdAt']
-  sortAscending: false
-  # End of sorting settings
+  unusedLinks: Ember.computed.filterBy('model', 'isUsed', false)
+  sortProperties: ['createdAt:desc']
+  sortedLinks: Ember.computed.sort('unusedLinks', 'sortProperties')
   itemController: 'linksItem'
   # selected will return all those views checked
-  selected: Ember.computed.filterBy('[]', 'isChecked', true)
-  # selectedLinks will return all those links objects based on 'selected' property
-  selectedLinks: Ember.computed.mapBy('selected', 'content')
+  selected: Ember.computed.filterBy('sortedLinks', 'isChecked', true)
   newLinkUrl: ''
   actions:
     addLink: ->
@@ -25,7 +22,7 @@ DiacodePicks.LinksController = Ember.ArrayController.extend
           alert('Error!')
         
     deleteSelection: ->
-      @get('selectedLinks').invoke('destroyRecord')
+      @get('selected').invoke('destroyRecord')
 
     createCompilationWithSelection: ->
       self = @
@@ -34,7 +31,7 @@ DiacodePicks.LinksController = Ember.ArrayController.extend
       # Adding links to compilation and saving.
       # Note - We have to call save method inside the promise. See:
       # http://stackoverflow.com/questions/21529816/set-hasmany-array-during-record-creation#comment32597322_21539764
-      compilationLinks = @get('selectedLinks').toArray()
+      compilationLinks = @get('selected').toArray()
       newCompilation.get('links').then (links) ->
         links.pushObjects(compilationLinks)
         newCompilation.save().then (=>

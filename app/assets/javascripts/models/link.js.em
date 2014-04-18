@@ -8,3 +8,6 @@ class DiacodePicks.Link extends DS.Model
   updatedAt: DS.attr('date')
   # Relationships
   compilation: DS.belongsTo('compilation')
+  # Computed properties
+  +computed compilation
+  isUsed: -> @compilation isnt null
