@@ -7,6 +7,7 @@
 #= require ember-simple-auth-devise
 #= require bootstrap/dropdown
 #= require moment
+#= require showdown
 #= require jquery.icheck
 #= require_self
 #= require diacode_picks

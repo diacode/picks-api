@@ -3,9 +3,7 @@
   .clearfix
 
 .compilation-details
-  h2 
-    | Diacode Picks #
-    = installment
+  h2 Diacode Picks ##{installment}
 
   if isEditing
     form submit="saveChanges"
@@ -21,7 +19,7 @@
   else
     .compilation-description{action "editIntroText" on="doubleClick"}
       if intro
-        = intro
+        = format-markdown intro
       else
         | Double click to add an introduction
 
