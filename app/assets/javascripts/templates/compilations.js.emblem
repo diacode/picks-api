@@ -5,7 +5,9 @@
         = link-to 'compilation' this
           .installment.pull-left= installment
           .details.pull-left
-            .link-count 123 links
+            .link-count 
+              = links.length
+              |  links
             .status 
               if isPublished
                 .published
@@ -20,5 +22,5 @@
       li.empty
         p No compilations created
 
-  .compilation-detail
+  .compilation-wrapper
     = outlet

@@ -1,1 +1,16 @@
-= installment
+.compilation-actions
+  button.btn.btn-lg.btn-primary.pull-right Publish
+  .clearfix
+
+.compilation-details
+  h2 
+    | Diacode Picks #
+    = installment
+
+  .compilation-links
+    each links
+      .pick
+        h3
+          a href=url target="_blank"
+            = title
+        p= description
