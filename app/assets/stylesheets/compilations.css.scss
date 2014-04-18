@@ -84,6 +84,14 @@
       max-width: 900px;
 
       h2{ margin-top: 0; }
+
+      form{
+        .edit-actions{
+          button{
+            margin-right: 5px;
+          }
+        }
+      }
     }
   }
 }

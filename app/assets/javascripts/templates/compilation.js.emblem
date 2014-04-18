@@ -7,6 +7,25 @@
     | Diacode Picks #
     = installment
 
+  if isEditing
+    form submit="saveChanges"
+      .form-group
+        Ember.TextArea value=intro class="form-control" placeholder="Enter an introduction text. You can use markdown"
+      
+      .form-group.edit-actions
+        button.btn.btn-primary type="submit" 
+          span.glyphicon.glyphicon-ok 
+          |  Save
+        button.btn.btn-default{action "cancelEditing"} type="button" Cancel
+
+  else
+    .compilation-description{action "editIntroText" on="doubleClick"}
+      if intro
+        = intro
+      else
+        | Double click to add an introduction
+
+
   .compilation-links
     each links
       .pick
