@@ -4,6 +4,12 @@ class Api::CompilationsController < Api::BaseController
   def create
     respond_with Compilation.create(compilation_params), location: nil
   end
+  
+  def update
+    @compilation = Compilation.find(params[:id])
+    @compilation.update_attributes(compilation_params)
+    respond_with @compilation
+  end
 
   def index
     respond_with Compilation.all
