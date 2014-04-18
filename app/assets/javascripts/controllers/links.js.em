@@ -28,14 +28,16 @@ DiacodePicks.LinksController = Ember.ArrayController.extend
       @get('selectedLinks').invoke('destroyRecord')
 
     createCompilationWithSelection: ->
-      link_ids = @get('selectedLinks').map (item) -> item.id
+      self = @
       newCompilation = @store.createRecord('compilation')
 
-      # Adding links to compilation
-      @get('selectedLinks').forEach (link) ->
-        newCompilation.get('links').addObject(link)
-
-      newCompilation.save().then (=>
-        alert "SAVED!"
-      ), ->
-        alert "SA MATAO PACO"
+      # Adding links to compilation and saving.
+      # Note - We have to call save method inside the promise. See:
+      # http://stackoverflow.com/questions/21529816/set-hasmany-array-during-record-creation#comment32597322_21539764
+      compilationLinks = @get('selectedLinks').toArray()
+      newCompilation.get('links').then (links) ->
+        links.pushObjects(compilationLinks)
+        newCompilation.save().then (=>
+          self.transitionToRoute('compilation', newCompilation)
+        ), ->
+          alert "Error: Something went wrong!"
