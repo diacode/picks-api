@@ -3,5 +3,4 @@
 DiacodePicks.ApplicationAdapter = DS.ActiveModelAdapter.extend
   namespace: 'api'
   
-DiacodePicks.ApplicationSerializer = DS.ActiveModelSerializer.extend()
-
+DiacodePicks.ApplicationSerializer = DS.ActiveModelSerializer.extend({})
