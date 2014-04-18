@@ -14,6 +14,6 @@ class Api::CompilationsController < Api::BaseController
   end
 
   def compilation_params
-    params.require(:compilation).permit(link_ids: [])
+    params.require(:compilation).permit(:intro, link_ids: [])
   end
 end
