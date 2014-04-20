@@ -50,6 +50,9 @@ gem 'metainspector'
 # Mailchimp integration
 gem 'gibbon'
 
+# Background processing
+gem 'sidekiq'
+
 # Ember dependencies
 gem 'ember-rails'
 gem 'ember-source', '1.5.0'
