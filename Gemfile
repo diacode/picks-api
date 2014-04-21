@@ -52,6 +52,7 @@ gem 'gibbon'
 
 # Background processing
 gem 'sidekiq'
+gem 'redis-semaphore'
 
 # Ember dependencies
 gem 'ember-rails'
