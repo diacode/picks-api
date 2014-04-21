@@ -1,6 +1,7 @@
 class DiacodePicks.Compilation extends DS.Model
   installment: DS.attr 'number', readOnly: true
   intro: DS.attr 'string'
+  publish: DS.attr 'boolean'
   publishedAt: DS.attr 'date', readOnly: true
   createdAt: DS.attr 'date', readOnly: true
   updatedAt: DS.attr 'date', readOnly: true
