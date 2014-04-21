@@ -1,8 +1,6 @@
 header
   nav.navbar.navbar-default.navbar-inverse role="navigation"
-    a href="/" class="navbar-brand"
-      img src="assets/picks-logo-left-white.png" width="24"
-      | PICKS
+    a href="/" class="navbar-brand" PICKS
 
     ul.nav.navbar-nav.navbar-right.header-actions
       if session.isAuthenticated
