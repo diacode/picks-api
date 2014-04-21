@@ -49,6 +49,7 @@ gem 'metainspector'
 
 # Mailchimp integration
 gem 'gibbon'
+gem 'render_anywhere'
 
 # Background processing
 gem 'sidekiq'
