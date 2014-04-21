@@ -50,6 +50,7 @@ gem 'metainspector'
 # Mailchimp integration
 gem 'gibbon'
 gem 'render_anywhere'
+gem 'redcarpet' # Markdown to HTML gem
 
 # Background processing
 gem 'sidekiq'
