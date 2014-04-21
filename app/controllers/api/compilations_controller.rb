@@ -8,6 +8,9 @@ class Api::CompilationsController < Api::BaseController
   def update
     @compilation = Compilation.find(params[:id])
     @compilation.update_attributes(compilation_params)
+    if @compilation.publish && @compilation.published_at.blank?
+      CompilationPublishingWorker.perform_async(@compilation.id)    
+    end
     respond_with @compilation
   end
 
@@ -20,6 +23,6 @@ class Api::CompilationsController < Api::BaseController
   end
 
   def compilation_params
-    params.require(:compilation).permit(:intro, link_ids: [])
+    params.require(:compilation).permit(:intro, :publish, link_ids: [])
   end
 end

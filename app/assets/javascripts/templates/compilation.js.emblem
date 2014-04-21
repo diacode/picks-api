@@ -1,6 +1,15 @@
-.compilation-actions
-  button.btn.btn-lg.btn-primary.pull-right Publish
-  .clearfix
+unless isEditing
+  unless publish 
+    .compilation-actions
+      button.btn.btn-lg.btn-primary.pull-right{action 'publish'} Publish
+      .clearfix
+
+if isPublished
+  .compilation-status
+    h2 
+      span.glyphicon.glyphicon-ok 
+      |  Delivered at 
+      = format-date publishedAt "LLLL"
 
 .compilation-details
   h2 Diacode Picks ##{installment}
@@ -30,4 +39,5 @@
         h3
           a href=url target="_blank"
             = title
+
         p= description

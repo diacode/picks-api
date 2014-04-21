@@ -1,0 +1,16 @@
+default: &default
+  api_key: <%= ENV["MAILCHIMP_API_KEY"] %>
+  list_id: 'YOUR_MAILCHIMP_LIST_ID'
+  from_email: 'john.doe@yourdomain.com'
+  from_name: 'Diacode Picks'
+  template_id: 'YOUR_MAILCHIMP_TEMPLATE_ID'
+  subject_prefix: 'Diacode Picks'
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

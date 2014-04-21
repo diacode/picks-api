@@ -71,10 +71,18 @@
   .compilation-wrapper{
     flex: 1 1 auto;
 
-    .compilation-actions{
+    .compilation-actions, .compilation-status{
       background-color: #50BA7F;
       padding: 1em;
       color: #fff;
+
+      h2 { 
+        margin: 0px; 
+        font-weight: 300;
+        .glyphicon{
+          margin-right: 10px;
+        }
+      }
     }
 
     .compilation-details{

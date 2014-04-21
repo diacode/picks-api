@@ -28,6 +28,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# Environment variables
+gem 'dotenv-rails'
+
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'devise'
@@ -43,6 +46,15 @@ gem 'factory_girl_rails'
 
 # Link inspection
 gem 'metainspector'
+
+# Mailchimp integration
+gem 'gibbon'
+gem 'render_anywhere'
+gem 'redcarpet' # Markdown to HTML gem
+
+# Background processing
+gem 'sidekiq'
+gem 'redis-semaphore'
 
 # Ember dependencies
 gem 'ember-rails'

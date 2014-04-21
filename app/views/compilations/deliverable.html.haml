@@ -1,0 +1,8 @@
+- unless compilation.intro.blank?
+  %div.intro= compilation.intro
+
+%dl.diacode-picks
+  - compilation.links.each do |link|
+    %dt
+      %a{href: link.url, target: '_blank'}= link.title
+    %dd= link.description
