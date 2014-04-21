@@ -1,4 +1,5 @@
 default: &default
+  api_key: <%= ENV["MAILCHIMP_API_KEY"] %>
   list_id: 'YOUR_MAILCHIMP_LIST_ID'
   from_email: 'john.doe@yourdomain.com'
   from_name: 'Diacode Picks'
