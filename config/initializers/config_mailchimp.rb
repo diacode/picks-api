@@ -1,1 +1,1 @@
-MAILCHIMP_CONFIG = YAML.load_file("#{Rails.root}/config/mailchimp.yml")[Rails.env]
+MAILCHIMP_CONFIG = YAML.load(ERB.new(File.new("#{Rails.root}/config/mailchimp.yml").read).result)[Rails.env]
