@@ -8,7 +8,7 @@
 #= require bootstrap/dropdown
 #= require moment
 #= require showdown
-#= require jquery.icheck
+#= require icheck
 #= require_self
 #= require diacode_picks
 
