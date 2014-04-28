@@ -20,6 +20,7 @@ form.add-link{
     color: #888;
     background-color: #fff;
     display: flex;
+    display: -webkit-flex;
     max-width: 900px;
 
     .checkbox-wrapper{
@@ -31,6 +32,7 @@ form.add-link{
 
     .details{
       flex: 1 10 auto;
+      -webkit-flex: 1 10 auto;
       margin-top: -5px;
 
       .title{

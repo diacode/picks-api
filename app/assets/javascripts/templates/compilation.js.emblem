@@ -1,15 +1,18 @@
-unless isEditing
-  unless publish 
-    .compilation-actions
-      button.btn.btn-lg.btn-primary.pull-right{action 'publish'} Publish
-      .clearfix
+.compilation-header-panel
+  unless isEditing
+    unless publish 
+      .compilation-actions
+        button.btn.btn-lg.btn-primary.pull-right{action 'publish'} Publish
+        .clearfix
 
-if isPublished
-  .compilation-status
-    h2 
-      span.glyphicon.glyphicon-ok 
-      |  Delivered at 
-      = format-date publishedAt "LLLL"
+  if isPublished
+    .compilation-status
+      h2 
+        span.glyphicon.glyphicon-ok 
+        |  Delivered at 
+        = format-date publishedAt "LLLL"
+
+  .clearfix
 
 .compilation-details
   h2 Diacode Picks ##{installment}

@@ -37,11 +37,13 @@ header{
   bottom: 0;
   left: 0;  
   display: flex;
+  display: -webkit-flex;
 
   aside#sidebar{
     width: 175px;
     background: $sidebar-background-color;
     flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
 
     ul{
       display:block;
@@ -91,6 +93,7 @@ header{
 
   #main{
     flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
     overflow: scroll;
     background-color: #EBEBEB;
     padding: 0;

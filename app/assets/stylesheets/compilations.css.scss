@@ -5,12 +5,14 @@
   bottom: 0;
   left: 0;
   display: flex;
+  display: -webkit-flex;
   height: 100%;
   width: 100%;
 
   ul.compilations-list{
     background-color: #fff;
     flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
     width: 300px;
     overflow: scroll;
     margin: 0px;
@@ -70,18 +72,28 @@
 
   .compilation-wrapper{
     flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
 
-    .compilation-actions, .compilation-status{
+    .compilation-header-panel{
       background-color: #50BA7F;
-      padding: 1em;
       color: #fff;
 
-      h2 { 
-        margin: 0px; 
-        font-weight: 300;
-        .glyphicon{
-          margin-right: 10px;
+      .compilation-status{
+        float:left;
+        padding: 1em;
+
+        h2{
+          margin: 5px; 
+          font-weight: 300;
+          .glyphicon{
+            margin-right: 10px;
+          }
         }
+      }
+
+      .compilation-actions{
+        float:right;
+        padding: 1em;
       }
     }
 
