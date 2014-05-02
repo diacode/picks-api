@@ -1,5 +1,5 @@
 - unless compilation.intro.blank?
-  %div.intro= compilation.intro
+  %div.intro= raw markdown.render(compilation.intro)
 
 %dl.diacode-picks
   - compilation.links.each do |link|

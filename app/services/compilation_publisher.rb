@@ -4,12 +4,13 @@ class CompilationPublisher
   # TODO: Implement some kind of error management
   def publish(compilation)
     gibbon = Gibbon::API.new(MAILCHIMP_CONFIG['api_key'])
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     
     # Rendering email content into a string
     email_content = render(
       layout: 'newsletter',
       template: 'compilations/deliverable',
-      locals: {compilation: compilation}
+      locals: {compilation: compilation, markdown: markdown}
     )
 
     # Campaign creation
