@@ -19,7 +19,7 @@
       button.btn.btn-default{action "cancelEditing"} type="button" Cancel
   else
     h2.title{action "editLink" on="doubleClick"}= title
-    p.description= description
+    p.description= format-markdown description
   
   p
     a href=url target="_blank" class="url"
