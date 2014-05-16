@@ -33,7 +33,10 @@
       if intro
         = format-markdown intro
       else
-        | Double click to add an introduction
+        unless isPublished
+          | Double click to add an introduction
+        else
+          | Introduction not available
 
 
   .compilation-links
@@ -42,5 +45,4 @@
         h3
           a href=url target="_blank"
             = title
-
-        p= format-markdown description
+        = format-markdown description

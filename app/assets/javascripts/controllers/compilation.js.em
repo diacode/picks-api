@@ -3,7 +3,8 @@ class DiacodePicks.CompilationController extends Ember.ObjectController
 
   actions:
     editIntroText: ->
-      @set('isEditing', true)
+      unless @get('isPublished') is true
+        @set('isEditing', true)
 
     saveChanges: ->
       # TODO: Take care of errors when saving
