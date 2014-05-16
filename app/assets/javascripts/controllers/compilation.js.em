@@ -19,3 +19,11 @@ class DiacodePicks.CompilationController extends Ember.ObjectController
       compilation = @get('model')
       compilation.set('publish', true)
       compilation.save()
+
+    deletePermanently: (link) ->
+      link.destroyRecord() if confirm('Are you sure?')
+
+    removeFromCompilation: (link) ->
+      compilation = @get('model')
+      compilation.get('links').removeObject(link)
+      compilation.save()

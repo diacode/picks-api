@@ -40,9 +40,17 @@
 
 
   .compilation-links
-    each links
-      .pick
-        h3
-          a href=url target="_blank"
-            = title
-        = format-markdown description
+    with this as compilation
+      each links
+        .pick
+          h3
+            a href=url target="_blank"
+              = title
+
+          = format-markdown description
+
+          unless compilation.isPublished
+            .actions
+              a{action "deletePermanently" this} href="#" Delete permanently
+              ||
+              a{action "removeFromCompilation" this} href="#" Remove from compilation

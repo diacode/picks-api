@@ -112,6 +112,19 @@
           }
         }
       }
+      .compilation-links{
+        .pick{
+          border-bottom: 1px dotted #ddd;
+          padding-bottom: 20px;
+
+          .actions{
+            text-align: right;
+            a{
+              margin: 0px 5px;
+            }
+          }
+        }
+      }
     }
   }
 }
