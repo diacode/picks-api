@@ -39,3 +39,18 @@ DiacodePicks.LinksController = Ember.ArrayController.extend
           self.transitionToRoute('compilation', newCompilation)
         ), ->
           alert "Error: Something went wrong!"
+
+    addToLastCompilation: ->
+      self = @
+      @get('store').find('compilation').then((compilations) ->
+        aCompilations = compilations.get('content')
+        lastCompilation = aCompilations[aCompilations.length-1]
+        
+        if lastCompilation.get('publishedAt') is null
+          compilationLinks = self.get('selectedLinks').toArray()
+          lastCompilation.get('links').then (links) ->
+            links.pushObjects(compilationLinks)
+            lastCompilation.save()
+        else
+          alert "Last compilation is already published"
+      )

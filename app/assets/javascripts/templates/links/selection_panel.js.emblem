@@ -12,7 +12,7 @@
 
     ul.dropdown-menu.pull-right
       li
-        a href="#" Add to last compilation
+        a{action 'addToLastCompilation'} href="#" Add to last compilation
       li
         a{action 'deleteSelection'} href="#" Delete
 
