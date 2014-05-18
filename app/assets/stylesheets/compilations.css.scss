@@ -73,6 +73,7 @@
   .compilation-wrapper{
     flex: 1 1 auto;
     -webkit-flex: 1 1 auto;
+    overflow: scroll;
 
     .compilation-header-panel{
       background-color: #50BA7F;
