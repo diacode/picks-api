@@ -16,7 +16,7 @@ class CompilationPublishingWorker
           cp.publish(compilation)
         end
       rescue => e
-        # ignore; do nothing
+        p e.backtrace
       ensure
         s.unlock
       end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140420162321) do
+ActiveRecord::Schema.define(version: 20140522231154) do
 
   create_table "compilations", force: true do |t|
     t.integer  "installment"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140420162321) do
     t.datetime "updated_at"
     t.text     "intro"
     t.boolean  "publish"
+    t.text     "error"
   end
 
   create_table "links", force: true do |t|

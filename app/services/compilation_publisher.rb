@@ -34,6 +34,15 @@ class CompilationPublisher
     campaign_send_response = gibbon.campaigns.send(cid: campaign_creation_response['id'])
 
     # Finally we mark the compilation as published if the API response says so
-    compilation.update_attribute(:published_at, DateTime.now) if campaign_send_response['complete']
+    if campaign_send_response['complete']
+      compilation.update_attributes(
+        published_at: DateTime.now,
+        error: nil
+      ) 
+    else
+      compilation.publish = false
+      compilation.error = campaign_send_response.to_s
+      compilation.save
+    end
   end
 end
