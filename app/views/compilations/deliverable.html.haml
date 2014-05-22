@@ -5,4 +5,4 @@
   - compilation.links.each do |link|
     %dt
       %a{href: link.url, target: '_blank'}= link.title
-    %dd= raw markdown.render(link.description)
+    %dd= raw markdown.render(link.description) unless link.description.blank?
