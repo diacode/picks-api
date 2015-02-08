@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.9'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -34,7 +33,7 @@ gem 'dotenv-rails'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'devise'
-gem 'jazz_hands', group: :development
+# gem 'jazz_hands', group: :development
 
 # Debugging
 gem 'byebug', group: :development
