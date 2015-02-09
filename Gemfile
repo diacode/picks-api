@@ -31,9 +31,7 @@ gem 'spring',        group: :development
 gem 'dotenv-rails'
 
 gem 'haml-rails'
-gem 'bootstrap-sass'
 gem 'devise'
-# gem 'jazz_hands', group: :development
 
 # Debugging
 gem 'byebug', group: :development
@@ -54,12 +52,6 @@ gem 'redcarpet' # Markdown to HTML gem
 # Background processing
 gem 'sidekiq'
 gem 'redis-semaphore'
-
-# Ember dependencies
-gem 'ember-rails'
-gem 'ember-source', '1.5.0'
-gem 'ember_script-rails', :github => 'ghempton/ember-script-rails'
-gem 'emblem-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
