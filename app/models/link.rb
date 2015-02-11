@@ -11,6 +11,10 @@ class Link < ActiveRecord::Base
   # Callbacks
   after_initialize :set_defaults
 
+  # Scopes
+  scope :approved, -> { where(approved: true) }
+  scope :unused, -> { where(used: false) }
+
   def self.discover(unknown_url)
     inspector = MetaInspector.new(unknown_url, allow_redirections: :all)
     {
