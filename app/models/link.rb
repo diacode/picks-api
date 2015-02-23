@@ -1,19 +1,13 @@
 class Link < ActiveRecord::Base
-  STATUSES = %w(new used discarded)
-
   # Relations
   belongs_to :compilation
 
   # Validations
   validates :url, presence: true
-  validates :status, inclusion: {in: STATUSES}
-
-  # Callbacks
-  after_initialize :set_defaults
 
   # Scopes
   scope :approved, -> { where(approved: true) }
-  scope :unused, -> { where(used: false) }
+  scope :unused, -> { where(compilation_id: nil) }
 
   def self.discover(unknown_url)
     inspector = MetaInspector.new(unknown_url, allow_redirections: :all)
@@ -23,9 +17,4 @@ class Link < ActiveRecord::Base
       description: inspector.meta['description']
     }
   end
-
-  private 
-    def set_defaults
-      self.status ||= 'new'
-    end
 end
