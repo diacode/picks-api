@@ -1,10 +1,18 @@
-# Diacode Picks
+# Picks API
 
-Diacode Picks is a small work in progress tool which will help you building link compilations and distributing them using third party services like Mailchimp.
+Diacode Picks is a small work in progress tool which will help you building link compilations and distributing them using third party services like Mailchimp. This particular project is based on [Rails 4.1](http://edgeguides.rubyonrails.org/4_1_release_notes.html) and acts as the backend of our app.
 
-## Overview
+## Drastic changes
 
-Diacode Picks is an [Ember.js](http://emberjs.com) application powered by a [Rails 4.1](http://edgeguides.rubyonrails.org/4_1_release_notes.html) backend. All of this is packed in a single project helped by [ember-rails](https://github.com/emberjs/ember-rails) gem.
+### Frontend removed
+
+Unlike the previous version right now the project doesn't include a frontend part built in as it did before relying on Ember.js and ember-rails gem.
+
+We plan to release a frontend for it in the future as a standalone project however at this moment we don't have anything yet.
+
+### Managing and publishing compilations
+
+Links model now includes an `approved` column. This way you can manage the compilations build and publishing in a different manner. You can auto publish compilations using `lib/tasks/buffer_watch.rake` once your 'buffer' of approved links has reached a threshold.
 
 ## Requirements
 
