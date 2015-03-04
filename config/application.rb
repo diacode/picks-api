@@ -20,5 +20,8 @@ module DiacodePicks
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.action_dispatch.perform_deep_munge = false
+
+    # Disabling assets compilation since this projects is just an API
+    config.assets.enabled = false
   end
 end
