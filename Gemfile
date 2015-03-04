@@ -30,6 +30,9 @@ gem 'spring',        group: :development
 # Environment variables
 gem 'dotenv-rails'
 
+# JSON Serializer
+gem 'active_model_serializers'
+
 gem 'haml-rails'
 gem 'devise'
 
