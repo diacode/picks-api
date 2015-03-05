@@ -36,7 +36,15 @@ The application implements user access so you need to setup all user account bef
 
 ### Mailchimp integration
 
-Diacode Picks uses [Mailchimp](http://mailchimp.com) to send the compilations to subscribers. Within the project is attached a `config/mailchimp.example.yml` file that you have to override with your own settings. 
+Diacode Picks uses [Mailchimp](http://mailchimp.com) to send the compilations to subscribers. Within the project is attached a `config/mailchimp.example.yml` file that you have to override with your own settings.
+
+### Twitter integration
+
+There is a twitter integration to publish links whenever they are marked as approved. This task is delegated to sidekiq's `TweetLinkWorker`. 
+
+Like mailchimp you will have to rename `config/twitter.example.yml` file to `config/twitter.yml` and fill it with your own settings.
+
+If you are not interested in sharing links to twitter you can disable this integration by changing `config.tweet_approved_links` to `false` in `config/application.rb`.
 
 ## Hubot integration
 
