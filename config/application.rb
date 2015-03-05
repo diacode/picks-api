@@ -23,5 +23,8 @@ module DiacodePicks
 
     # Disabling assets compilation since this projects is just an API
     config.assets.enabled = false
+
+    # Tweet approved links
+    config.tweet_approved_links = true
   end
 end
