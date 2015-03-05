@@ -29,7 +29,8 @@ class Api::LinksController < Api::BaseController
     params.require(:link).permit(
       :title,
       :description,
-      :category
+      :category,
+      :approved
     )
   end
 end
