@@ -52,6 +52,9 @@ gem 'gibbon'
 gem 'render_anywhere'
 gem 'redcarpet' # Markdown to HTML gem
 
+# Twitter integration
+gem 'twitter'
+
 # Background processing
 gem 'sidekiq'
 gem 'redis-semaphore'
