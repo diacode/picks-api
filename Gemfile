@@ -30,6 +30,9 @@ gem 'spring',        group: :development
 # Environment variables
 gem 'dotenv-rails'
 
+# CORS
+gem 'rack-cors', require: 'rack/cors'
+
 # JSON Serializer
 gem 'active_model_serializers'
 
