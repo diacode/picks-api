@@ -9,16 +9,15 @@ class Api::BaseController < ApplicationController
 
   private
     # Token authentication based on:
-    # https://github.com/simplabs/ember-simple-auth/tree/master/packages/ember-simple-auth-devise#the-authorizer
+    # https://github.com/simplabs/ember-simple-auth/tree/master/packages/ember-simple-auth-devise#server-side-setup
     def authenticate_user_from_token!
-      token = request.headers['auth-token'].to_s
-      email = request.headers['auth-email'].to_s
-      return unless token && email
+      authenticate_with_http_token do |token, options|
+        user_email = options[:email].presence
+        user = user_email && User.find_by_email(user_email)
 
-      user = User.find_by_email(email)
-
-      if user && Devise.secure_compare(user.api_token, token)
-        sign_in user, store: false
+        if user && Devise.secure_compare(user.api_token, token)
+          sign_in user, store: false
+        end
       end
     end
 end
