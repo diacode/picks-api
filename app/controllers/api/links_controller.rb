@@ -23,6 +23,10 @@ class Api::LinksController < Api::BaseController
     render json: nil, status: :ok
   end
 
+  def buffer
+    respond_with Link.unused.approved
+  end
+
   private
 
   def link_params

@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   root to: "application#index"
   
   namespace :api, defaults: { format: :json } do
-    resources :links
+    resources :links do
+      get :buffer, on: :collection
+    end
     resources :compilations
   end
 end
