@@ -11,6 +11,10 @@ class Api::LinksController < Api::BaseController
     respond_with Link.all
   end
 
+  def show
+    respond_with Link.find(params[:id])
+  end
+
   def update
     @link = Link.find(params[:id])
     @link.update_attributes(link_params)
