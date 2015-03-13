@@ -6,6 +6,7 @@ class Link < ActiveRecord::Base
   validates :url, presence: true
 
   # Scopes
+  default_scope { order(created_at: :desc) }
   scope :approved, -> { where(approved: true) }
   scope :unapproved, -> { where(approved: false) }
   scope :unused, -> { where(compilation_id: nil) }
