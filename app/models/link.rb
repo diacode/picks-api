@@ -7,6 +7,7 @@ class Link < ActiveRecord::Base
 
   # Scopes
   scope :approved, -> { where(approved: true) }
+  scope :unapproved, -> { where(approved: false) }
   scope :unused, -> { where(compilation_id: nil) }
 
   # Callback. 

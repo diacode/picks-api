@@ -27,8 +27,12 @@ class Api::LinksController < Api::BaseController
     render json: nil, status: :ok
   end
 
-  def buffer
+  def approved
     respond_with Link.unused.approved
+  end
+
+  def unapproved
+    respond_with Link.unused.unapproved
   end
 
   private
