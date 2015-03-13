@@ -8,7 +8,9 @@ class Api::LinksController < Api::BaseController
   end
 
   def index
-    respond_with Link.all
+    @links = Link.unused
+    filter_by_approval if params[:approved].present?
+    respond_with @links
   end
 
   def show
@@ -27,14 +29,6 @@ class Api::LinksController < Api::BaseController
     render json: nil, status: :ok
   end
 
-  def approved
-    respond_with Link.unused.approved
-  end
-
-  def unapproved
-    respond_with Link.unused.unapproved
-  end
-
   private
 
   def link_params
@@ -44,5 +38,13 @@ class Api::LinksController < Api::BaseController
       :category,
       :approved
     )
+  end
+
+  def filter_by_approval
+    if params[:approved] == 'true'
+      @links = @links.approved
+    else
+      @links = @links.unapproved
+    end
   end
 end

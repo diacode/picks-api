@@ -4,10 +4,7 @@ Rails.application.routes.draw do
   root to: "application#index"
   
   namespace :api, defaults: { format: :json } do
-    resources :links do
-      get :approved, on: :collection
-      get :unapproved, on: :collection
-    end
+    resources :links
     resources :compilations
   end
 end
