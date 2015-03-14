@@ -2,6 +2,9 @@ class Compilation < ActiveRecord::Base
   # Relations
   has_many :links
 
+  # Scopes
+  default_scope { order(installment: :desc) }
+
   # Callbacks
   before_create :generate_installment
 
