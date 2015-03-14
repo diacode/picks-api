@@ -37,7 +37,12 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'active_model_serializers'
 
 gem 'haml-rails'
+
+# Auth
 gem 'devise'
+
+# Pagination
+gem 'kaminari'
 
 # Debugging
 gem 'byebug', group: :development

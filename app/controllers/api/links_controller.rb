@@ -44,7 +44,8 @@ class Api::LinksController < Api::BaseController
     if params[:approved] == 'true'
       @links = @links.approved
     else
-      @links = @links.unapproved
+      # We'll paginate these results since they could be too many
+      @links = @links.unapproved.page(params[:page])
     end
   end
 end
