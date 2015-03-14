@@ -11,7 +11,8 @@ class Link < ActiveRecord::Base
   scope :unapproved, -> { where(approved: false) }
   scope :unused, -> { where(compilation_id: nil) }
 
-  # Callback. 
+  # Callbacks
+  before_save :strip_title
   after_update :publish_tweet, if: Proc.new { |link| 
     Rails.configuration.tweet_approved_links &&
     link.approved_changed? && 
@@ -30,4 +31,9 @@ class Link < ActiveRecord::Base
   def publish_tweet
     TweetLinkWorker.perform_async(self.id)
   end
+
+  private
+    def strip_title
+      self.title = title.strip
+    end
 end
